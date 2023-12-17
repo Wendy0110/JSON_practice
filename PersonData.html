@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>JSON操作範例(個人資料)</title>
+    </head>
+    
+    <body>
+        <h2>個人資料</h2>
+        <div id="Name"></div>
+        <div id="Gender"></div>
+        <div id="Birthday"></div>
+        <div id="Interests"></div>
+
+        <script>
+            //創建一個包含個人資料的JSON物件
+            var person = {
+                "name": "Wendy",
+                "gender": "Female",
+                "birthday": "2003-01-10",
+                "interests": ["Singing", "Cooking"]
+            };
+            
+            //使用 getElementById 獲取ID為 "Name" 的 <div>，將其內容設定為姓名。以此類推
+            document.getElementById("Name").innerHTML = "姓名: " + person.name;
+            document.getElementById("Gender").innerHTML = "性別: " + person.gender;
+            document.getElementById("Birthday").innerHTML = "生日: " + person.birthday;
+            document.getElementById("Interests").innerHTML = "興趣: " + person.interests.join(", ");
+        </script>
+    </body>
+
+</html>

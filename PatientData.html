@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>JSON操作範例(病人資料)</title>
+    </head>
+    
+    <body>
+        <script>
+            //創建一個包含病人資料的JSON物件
+            var patient = [{
+                "id":"001",
+                "name": "Wendy",
+                "gender": "Female",
+                "birthday": "2003-01-10",
+                "diagnosis": "Hypertension",
+                "medications": ["MedA", "MedB"],
+            }];
+
+            //使用 alert 將資料以對話框的形式顯示在網頁上
+            alert("病人資料"+
+                "\nID: " + patient[0].id +
+                "\n姓名: " + patient[0].name +
+                "\n性別: " + patient[0].gender +
+                "\n生日: " + patient[0].birthday +
+                "\n診斷: " + patient[0].diagnosis +
+                "\n藥物: " + patient[0].medications.join(", ")
+                );
+        </script>
+    </body>
+
+</html>
